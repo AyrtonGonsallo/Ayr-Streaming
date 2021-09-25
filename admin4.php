@@ -29,36 +29,19 @@ session_start();
        <div class="container">
 
          <div class="jumbotron">
-           <h1> Enter the episod details</h1>
+           <h1> Enter the season details</h1>
            <p> <b></b> </p> <br>
 
-           <form class="" action="backend/admin_control3.php" method="POST" enctype="multipart/form-data">
+           <form class="" action="backend/admin_control4.php" method="POST" enctype="multipart/form-data">
+            <input type="text" class="form-control" placeholder="Serie" name="serie" value=""><br>
+            <input type="number" class="form-control" placeholder="season number" name="sname" value=""><br>
             
-            <input type="text" class="form-control" placeholder="episod Name" name="mname" value=""><br>
-            <input type="number" class="form-control" placeholder="Season" name="season" value=""><br>
-             <input type="number" class="form-control" placeholder="Runtime" name="rtime" value=""><br>
-             <input type="text" class="form-control" placeholder="serie name" name="sname" value="">
-             <div class="row">
-               <div class="col">
-               <table>
-                   <tr>
-                     <td> <label for=""><b>Upload Video : </b></label> </td>
-                     <td>
-                          <div class="">
-                              <input type="hidden" name="size" value="30000000">
-
-                              <input type="file" name="video" value="">
-                          </div>
-                     </td>
-                   </tr>
-                 </table>
-               </div>
-               
-             </div> <br><br>
+             <input type="number" class="form-control" placeholder="number of episodes" name="nep" value=""><br>
+             <input type="text" class="form-control" placeholder="description" name="desc" value="">
+             
              <div class="signupbutton">
                <input type="submit" class ="btn btn-success btn-lg" name="upload" value="Submit" >
              </div>
-
 
            </form>
 

@@ -71,6 +71,7 @@ if (condition != '') {
                 if ($_SESSION['admin'] == 1) {
                   echo "<li class='nav-item'> <a href='admin.php' class='nav-link'>Add movie</a> </li>";
                   echo "<li class='nav-item'> <a href='admin2.php' class='nav-link'>Add serie</a> </li>";
+                  echo "<li class='nav-item'> <a href='admin4.php' class='nav-link'>Add season</a> </li>";
                   echo "<li class='nav-item'> <a href='admin3.php' class='nav-link'>Add episode</a> </li>";
                 }
               }
@@ -97,6 +98,16 @@ if (condition != '') {
                   $quer3->bindValue('id',$id, PDO::PARAM_INT);
                   $quer3->execute();
                   $rel3 = $quer3->fetch(PDO::FETCH_ASSOC);
+
+                  $quer4 = $bdd->prepare("SELECT * FROM episods WHERE id in (SELECT eid from user1 where id =:id)");
+                  $quer4->bindValue('id',$id, PDO::PARAM_INT);
+                  $quer4->execute();
+                  $rel4 = $quer4->fetch(PDO::FETCH_ASSOC);
+
+                  $quer5 = $bdd->prepare("SELECT * FROM series WHERE sid =:sid");
+                  $quer5->bindValue('sid',$rel4['sid'], PDO::PARAM_INT);
+                  $quer5->execute();
+                  $rel5 = $quer5->fetch(PDO::FETCH_ASSOC);
 
               echo"<h1 style='color:black;position:sticky;'>WELCOME <i style = 'color: black;font-size: 25px'> ".ucwords($rel['firstname'])." !</i></h1>
                   </div>
@@ -130,7 +141,7 @@ if (condition != '') {
 
                 <div class='row'>
                   <div class='col'>
-                    <form action='movie.php' method='POST'>
+                    <form action='seasons.php' method='POST'>
                     <h4 style='font-size:25px;color:white;'>Last Serie Seen :
                     <input type='submit' name='submit' class='btn btn-success' style='display:inline;width:200px;margin-left:20px;margin-right:20px;' value='".ucwords($rel3['name'])."'/></h4>
                     </form>
@@ -151,6 +162,12 @@ if (condition != '') {
                   </div>
                 </div>
 
+                <div class='col'>
+                <form action='serie.php?episod=".$rel4['id']."' method='POST'>
+                <h4 style='font-size:25px;color:white;'>Last Episod Seen :
+                <input type='submit' name='submit' class='btn btn-success' style='display:inline;width:200px;margin-left:20px;margin-right:20px;' value='".ucwords($rel5['name'])." ".ucwords($rel4['name'])."'/></h4>
+                </form>
+              </div>
                 </div>";
                   ?>
       <div class="jumbotron" style="background-color:#1C1C1C;">
