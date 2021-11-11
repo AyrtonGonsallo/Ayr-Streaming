@@ -3,10 +3,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-$server_ip="localhost";
-$server_database="streaming";
-$server_user="root";
-$server_password=""; 
+$server_ip="remotemysql.com";
+$server_database="7LHzcHuC1k";
+$server_user="7LHzcHuC1k";
+$server_password="VmMDKMmHnw"; 
 $mysqli = new mysqli($server_ip, $server_user, $server_password, $server_database);
 try
 {

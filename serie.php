@@ -65,19 +65,21 @@ if (isset($_POST['submit'])) {
 
             echo"<a href='homepage.php' style='font-size: 20px;color:orange;border:1px solid orange;border-radius:5px;padding:10px;text-decoration:none;'>Back to Home </a><br>";
 
-          echo "<br></div><h1 style='display: inline;color:#D8D8D8;'>".ucwords($result['name'])."</h1>";
+            echo "<br><h1 style='display: inline;color:#D8D8D8;'>".ucwords($result3['name'])."</h1>";
           echo"<br><h5 style='display: inline;color:#D8D8D8;'>".ucfirst($result3['description'])."</h5>";
 
 
           echo"<br><div class='info'><h5 style='display: inline;color:#D8D8D8;'>".$result2['rdate']."</h5>";
           echo" - ";
           echo"<h5 style='display: inline;color:#D8D8D8;'>".ucwords($result2['genre'])."</h5>";
-          echo" - ";
-          echo"<h5 style='display: inline;color:orange;' >Runtime : </h5><h5 style='display: inline;color:#D8D8D8;'>".$result['runtime']." mins </h5>";
+          echo" ; <br><br>";
+          echo "<br></div><h1 style='display: inline;color:#D8D8D8;'>episod: ".ucwords($result['name'])."</h1><br><br>        --------------------  <br><br>";
+          
+          echo"<h5 style='display: inline;color:orange;' >Description : </h5><h5 style='display: inline;color:#D8D8D8;'>".$result['description']." </h5>";
+          echo"<br><h5 style='display: inline;color:orange;' >Runtime : </h5><h5 style='display: inline;color:#D8D8D8;'>".$result['runtime']." mins </h5>";
           echo" - ";
           echo"<h5 style='display: inline;color:orange;' >Views : </h5><h5 style='display: inline;color:#D8D8D8;'>".$result['viewers']."</h5></div>";
-
-
+          echo"  ";
 
 
 

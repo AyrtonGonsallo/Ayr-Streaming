@@ -37,8 +37,22 @@ session_start();
             <input type="number" class="form-control" placeholder="season number" name="sname" value=""><br>
             
              <input type="number" class="form-control" placeholder="number of episodes" name="nep" value=""><br>
-             <input type="text" class="form-control" placeholder="description" name="desc" value="">
-             
+             <textarea type="text" class="form-control" rows="5"  placeholder="description" name="desc" value=""></textarea>
+             <div class="row">
+               <div class="col">
+                 <table>
+                   <tr>
+                     <td> <label for=""><b>Upload Image : </b></label> </td>
+                     <td>
+                          <div class="">
+                              <input type="hidden" name="size" value="100000">
+
+                              <input type="file" name="image" value="">
+                          </div>
+                     </td>
+                   </tr>
+                 </table>
+               </div>
              <div class="signupbutton">
                <input type="submit" class ="btn btn-success btn-lg" name="upload" value="Submit" >
              </div>

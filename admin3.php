@@ -37,7 +37,8 @@ session_start();
             <input type="text" class="form-control" placeholder="episod Name" name="mname" value=""><br>
             <input type="number" class="form-control" placeholder="Season" name="season" value=""><br>
              <input type="number" class="form-control" placeholder="Runtime" name="rtime" value=""><br>
-             <input type="text" class="form-control" placeholder="serie name" name="sname" value="">
+             <input type="text" class="form-control" placeholder="serie name" name="sname" value=""><br><br>
+             <textarea type="text" class="form-control" rows="5"  placeholder="description" name="desc" value=""></textarea><br>
              <div class="row">
                <div class="col">
                <table>

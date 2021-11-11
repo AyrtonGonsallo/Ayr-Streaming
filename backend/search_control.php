@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
 
     }
     else{
-      $sql="SELECT * FROM movies WHERE description LIKE '%".$text."%'";
+      $sql="SELECT * FROM movies WHERE keywords_fr LIKE '%".$text."%' or keywords_en LIKE '%".$text."%'";
       $req = $bdd->prepare($sql);
       $req->execute();
 
@@ -50,7 +50,8 @@ if(isset($_POST['submit'])){
           $i++;
         }
         echo"</div>";
-    }
+
+      }
     
   }
 

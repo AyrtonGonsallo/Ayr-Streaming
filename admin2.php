@@ -41,7 +41,11 @@ session_start();
              <br>
              <input type="number" class="form-control" placeholder="Average Runtime in minutes of episodes" name="rtime" value="">
              <br>
-             <input type="text" class="form-control" placeholder="Description..." name="desc" value="">
+             <input type="text" class="form-control" placeholder="english keywords" name="keywords_en" value="">
+             <br>
+             <input type="text" class="form-control" placeholder="french keywords" name="keywords_fr" value="">
+             <br>
+             <textarea type="text" class="form-control" rows="5" placeholder="Description..." name="desc" value=""></textarea>
              <br>
              <input type="text" class="form-control" placeholder="Number of seasons" name="seasons" value="">
              <br>

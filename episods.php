@@ -10,7 +10,12 @@ if (isset($_POST['submit'])) {
   $req->bindValue('sid',$sid , PDO::PARAM_INT);
   $req->execute();
   $res = $req->fetch(PDO::FETCH_ASSOC);
-    
+  
+  $req3 = $bdd->prepare("SELECT * FROM seasons WHERE sid = :sid");
+  $req3->bindValue('sid',$sid , PDO::PARAM_INT);
+  $req3->execute();
+  $res3 = $req3->fetch(PDO::FETCH_ASSOC);
+
     $req2 = $bdd->prepare("SELECT * FROM episods WHERE sid = :sid and season=:sea");
   $req2->bindValue('sid',$sid , PDO::PARAM_INT);
   $req2->bindValue('sea',$season , PDO::PARAM_INT);
@@ -43,8 +48,16 @@ if (isset($_POST['submit'])) {
 
            
             echo"<a href='homepage.php' style='font-size: 20px;color:orange;border:1px solid orange;border-radius:5px;padding:10px;text-decoration:none;'>Back to Home </a><br>";
-            echo "<img src='".ucwords($res['imgpath'])."' height='250' width='200' style='margin-top: 30px;margin-left:30px;margin-right:20px;' />";
-          echo "<br></div><h1 style='display: inline;color:#D8D8D8;'>".ucwords($res['name'])."</h1>";
+            echo "<div  style='display:flex;flex-direction:row;'>
+              <div>
+                <img src='".ucwords($res3['imgpath'])."' height='250' width='200' style='margin-top: 30px;margin-left:30px;margin-right:20px;' />
+              </div>
+              <div style='margin-top: 50px;'><i style='font-size: 40px;'>Resume:<br></i>
+              <h3 style='display: inline;color:orange;'>".ucwords($res3['description'])."</h3>
+              </div>
+              </div>
+            ";
+          echo "<br>-----------------------<br></div><h1 style='display: inline;color:#D8D8D8;'>".ucwords($res['name'])."</h1>";
           echo"<br><h5 style='display: inline;color:#D8D8D8;'>All Episods of Season ".$season."</h1><br><br>";
             
         
@@ -54,8 +67,9 @@ if (isset($_POST['submit'])) {
             <form action='serie.php?episod=".$result['id']."' method='POST'>
                     <input type='submit' name='submit' class='btn btn-success' style='display:inline;width:200px;margin-left:20px;margin-right:20px;' value='".ucwords($result['name'])."'/>
             </form><br>
-            <h4 style='font-size:25px;color:white;'><i style='font-size:35px;' >Viewers: </i> ".ucwords($result['viewers'])."</h4>
-            <h4 style='font-size:25px;color:white;'><i style='font-size:35px;' >Runtime: </i> ".ucwords($result['runtime'])."</h4>
+            <h4 style='font-size:25px;color:white;'><i style='font-size:35px;color:orange;' >Description: </i> ".ucwords($result['description'])."</h4>
+            <h4 style='font-size:25px;color:white;'><i style='font-size:35px;color:orange;' >Runtime: </i> ".ucwords($result['runtime'])."</h4>
+            <h4 style='font-size:25px;color:white;'><i style='font-size:35px;color:orange;' > Viewers: </i> ".ucwords($result['viewers'])."</h4>
             
             </div><br><br>";
          

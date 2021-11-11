@@ -43,17 +43,31 @@ if (isset($_POST['submit'])) {
             echo"<a href='homepage.php' style='font-size: 20px;color:orange;border:1px solid orange;border-radius:5px;padding:10px;text-decoration:none;'>Back to Home </a><br>";
             echo "<img src='".ucwords($res['imgpath'])."' height='250' width='200' style='margin-top: 30px;margin-left:30px;margin-right:20px;' />";
             echo "<br></div><h1 style='display: inline;color:#D8D8D8;'>".ucwords($res['name'])."</h1>";
-          echo"<br><h5 style='display: inline;color:#D8D8D8;'>".ucfirst($res['description'])."</h5>";
-            echo"<br><h1 style='background-color:gray;color:#D8D8D8;'>All Seasons</h1><br><br>";
+          echo"<br><h5 style='display: inline;color:#B8B8B8;'>".ucfirst($res['description'])."</h5>";
+          echo"<br><br><h5 style='display: inline;color:#B8B8B8;'><u5 style='color:orange;' >genre:</u5> ".ucfirst($res['genre'])."</h5>";
+          echo"<br><h5 style='display: inline;color:#B8B8B8;'><u5 style='color:orange;' >release date:</u5> ".ucfirst($res['rdate'])."</h5>";
+          echo"<br><h5 style='display: inline;color:#B8B8B8;'><u5 style='color:orange;' >total seasons:</u5> ".ucfirst($res['seasons'])."</h5>";
+          echo"<br><h5 style='display: inline;color:#B8B8B8;'><u5 style='color:orange;' >total episods:</u5> ".ucfirst($res['episods'])."</h5>";
+          echo"<br><h5 style='display: inline;color:#B8B8B8;'><u5 style='color:orange;' >keywords:</u5> ".ucfirst($res['keywords_en'])."</h5>";
+        
+        
+          echo"<br><br>----------------------------------------  <br><h1 style='background-color:gray;color:orange;'>All Seasons</h1><br>";
         
         
           while($result = $req2->fetch(PDO::FETCH_ASSOC)){
             $season=intval(substr($result['name'], 7));
-            echo "<div class='jumbotron' style='background-color:#1C1C1C;margin-bottom: 0px;'>
-            <form action='episods.php?serie=".$sid."&season=".$season."' method='POST'>
-                    <input type='submit' name='submit' class='btn btn-success' style='display:inline;width:200px;margin-left:20px;margin-right:20px;' value='".ucwords($result['name'])."'/>
-            </form><br>
-            <h4 style='font-size:25px;color:white;'><u style='font-size:35px;' >DESCRIPTION:</u></h4>".ucwords($result['description'])."
+            echo "
+            <div class='jumbotron' style='background-color:#1C1C1C;margin-bottom: 0px;display:flex;flex-direction:row;'>
+            <div >
+                <img src='".ucwords($result['imgpath'])."' height='250' width='200' style='margin-top: 30px;margin-left:30px;margin-right:20px;'>
+            </div>
+            <div>
+                <form action='episods.php?serie=".$sid."&season=".$season."' method='POST'>
+                        <input type='submit' name='submit' class='btn btn-success' style='display:inline;width:200px;margin-left:20px;margin-right:20px;' value='".ucwords($result['name'])."'/>
+                </form><br>
+                <h4 style='font-size:25px;color:orange;'><u style='font-size:25px;' >Description:</u></h4><h5 style='display: inline;color:white;'>".ucwords($result['description'])."</h5>
+                <br><br><h4 style='font-size:25px;color:white;'><i style='color:orange;' >total episods : </i>".ucwords($result['NEP'])."</h4>
+            </div>
             </div><br><br>";
          
        

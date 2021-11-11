@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
 
     }
     else{
-      $sql="SELECT * FROM series WHERE description LIKE '%".$text."%'";
+      $sql="SELECT * FROM series WHERE keywords_fr LIKE '%".$text."%' or keywords_en LIKE '%".$text."%'";
       $req = $bdd->prepare($sql);
       $req->execute();
 

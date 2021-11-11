@@ -108,9 +108,31 @@ if (condition != '') {
                   $quer5->bindValue('sid',$rel4['sid'], PDO::PARAM_INT);
                   $quer5->execute();
                   $rel5 = $quer5->fetch(PDO::FETCH_ASSOC);
-
+              
               echo"<h1 style='color:black;position:sticky;'>WELCOME <i style = 'color: black;font-size: 25px'> ".ucwords($rel['firstname'])." !</i></h1>
-                  </div>
+                  pub
+                  <div class='pub-footer'>
+        <div class='row banniere1'>
+            <a href='' class='col-sm-12'>
+            <script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+            <!-- 728x90 Footer -->
+            <ins class='adsbygoogle'
+             style='display:inline-block;width:970px;height:250px; text-align: center'
+                 data-ad-client='ca-pub-7261110840191217'
+                 data-ad-slot='9684185348'
+                 data-adtest='on'
+                 data-ad-format='auto'
+                 data-full-width-responsive='true'></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</a>
+        </div>
+    </div>
+
+
+              </div>
+                  
                   </header>
                   <section>
 

@@ -17,13 +17,13 @@ if (isset($_POST['upload'])) {
   $serie= $res1['sid'];
   
   $season=$_POST['season'];
-
+  $desc=$_POST['desc'];
   $sql0="SELECT * from seasons where sid LIKE '%".$serie."%' and name like'%Season ".$season."%'";
   $Versea = $bdd->prepare($sql0);
   $Versea->execute();
   $res2=$Versea->fetch(PDO::FETCH_ASSOC);
   if(!$res2){
-    header("Location: ../admin4.php");
+    header("Location: ../homepage.php");
     exit();
   }
 
@@ -33,11 +33,12 @@ if (isset($_POST['upload'])) {
   $rtime = $_POST['rtime'];
   $video = $_FILES['video']['name'];
 
-  $req = $bdd->prepare("INSERT INTO episods (name, videopath, sid, runtime,season) VALUES(:name , :video , :sid , :run,:sea )");
+  $req = $bdd->prepare("INSERT INTO episods (name, videopath, sid, runtime, description,season) VALUES(:name , :video , :sid , :run,:desc,:sea )");
   $req->bindValue('name',$name, PDO::PARAM_STR);
   $req->bindValue('run',$rtime, PDO::PARAM_INT);
   $req->bindValue('sid',$serie, PDO::PARAM_INT);
   $req->bindValue('sea',$season, PDO::PARAM_INT);
+  $req->bindValue('desc',$desc, PDO::PARAM_STR);
   $req->bindValue('video',$targetvid, PDO::PARAM_STR);
   $req->execute();
 
