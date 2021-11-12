@@ -7,7 +7,7 @@ session_start();
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>NeonFlix</title>
+    <title>Ayr-Streaming</title>
     <link rel="stylesheet" href="css/master.css" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
@@ -16,7 +16,7 @@ session_start();
       <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
             <a href="login.php" class="navbar-brand"> <img src="images/logo.png" alt=""> </a>
-            <span class="navbar-text">NeonFlix</span>
+            <span class="navbar-text">Ayr-Streaming</span>
 
             <ul class="navbar-nav">
               <li class="nav-item"> <a href="#A" class="nav-link"> Services</a> </li>
@@ -45,16 +45,16 @@ session_start();
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <p class="arrange"><img src="images/mob.png" alt=""> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p class="arrange"><img src="images/mob.png" alt=""> <br> we are planning a mobile application...
               </p>
             </div><div class="col-md-4">
-              <p class="arrange"><img src="images/mess.png" alt=""> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p class="arrange"><img src="images/mess.png" alt=""> <br> You can interract with other users...
               </p>
             </div>
               <div class="col-md-4">
 
                 <p class="arrange">
-                  <img src="images/desktop.jpg"> <br>   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <img src="images/desktop.jpg"> <br>   Watch everywhere on computer...
                 </p>
               </div>
 
@@ -66,8 +66,8 @@ session_start();
     </section>
     <footer class="page-footer font-small blue">
 
-      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="">shubhamb756@gmail.com</a>
+      <div class="footer-copyright text-center py-3">© 2022 Copyright:
+        <a href="">ayrtongonsallo444@gmail.com</a>
       </div>
 
     </footer>

@@ -8,7 +8,7 @@ session_start();
 <html lang="en" dir="ltr">
 <head style='background-color:#000000;'>
   <meta charset="utf-8">
-  <title>NeonFlix-Homepage</title>
+  <title>Ayr-Streaming -Homepage</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -63,7 +63,7 @@ if (condition != '') {
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a href="#" class="navbar-brand"> <img src="images/logo.png" alt=""> </a>
-            <span class="navbar-text">NeonFlix</span>
+            <span class="navbar-text">Ayr-Streaming</span>
 
             <ul class="navbar-nav">
               <?php

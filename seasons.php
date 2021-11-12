@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 
            
             echo"<a href='homepage.php' style='font-size: 20px;color:orange;border:1px solid orange;border-radius:5px;padding:10px;text-decoration:none;'>Back to Home </a><br>";
-            echo "<img src='".ucwords($res['imgpath'])."' height='250' width='200' style='margin-top: 30px;margin-left:30px;margin-right:20px;' />";
+            echo "<img src='".ucwords($res['imgpath'])."' height='250' width='200' alt='".ucwords($res['imgpath'])."'style='margin-top: 30px;margin-left:30px;margin-right:20px;' />";
             echo "<br></div><h1 style='display: inline;color:#D8D8D8;'>".ucwords($res['name'])."</h1>";
           echo"<br><h5 style='display: inline;color:#B8B8B8;'>".ucfirst($res['description'])."</h5>";
           echo"<br><br><h5 style='display: inline;color:#B8B8B8;'><u5 style='color:orange;' >genre:</u5> ".ucfirst($res['genre'])."</h5>";
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
             echo "
             <div class='jumbotron' style='background-color:#1C1C1C;margin-bottom: 0px;display:flex;flex-direction:row;'>
             <div >
-                <img src='".ucwords($result['imgpath'])."' height='250' width='200' style='margin-top: 30px;margin-left:30px;margin-right:20px;'>
+                <img src='".ucwords($result['imgpath'])."' height='250' width='200' alt='".ucwords($result['imgpath'])."' style='margin-top: 30px;margin-left:30px;margin-right:20px;'>
             </div>
             <div>
                 <form action='episods.php?serie=".$sid."&season=".$season."' method='POST'>

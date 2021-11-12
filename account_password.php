@@ -6,7 +6,7 @@ session_start();
  <html lang="en" dir="ltr">
  <head>
    <meta charset="utf-8">
-   <title>NeonFlix-Account</title>
+   <title>Ayr-Streaming -Account</title>
    <link rel="stylesheet" href="css/homepage.css" type="text/css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
  </head>
@@ -15,7 +15,7 @@ session_start();
 
          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
              <a href="homepage.php" class="navbar-brand"> <img src="images/logo.png" alt=""> </a>
-             <span class="navbar-text">NeonFlix</span>
+             <span class="navbar-text">Ayr-Streaming</span>
 
              <ul class="navbar-nav">
 
