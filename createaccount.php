@@ -16,7 +16,7 @@ session_start();
      <div class="container-fluid">
        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
            <a href="login.php" class="navbar-brand"> <img src="images/logo.png" alt=""> </a>
-           <span class="navbar-text">NeonFlix</span>
+           <span class="navbar-text">Ayr-Streaming</span>
 
            <ul class="navbar-nav">
              <li class="nav-item"> <a href="user-login.php" class="nav-link"> SignIn</a> </li>
