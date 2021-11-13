@@ -59,7 +59,7 @@ session_start();
   <footer class="page-footer font-small blue">
 
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="">shubhamb756@gmail.com</a>
+      <a href="">ayrtongonsallo444@gmail.com</a>
     </div>
 
   </footer>
