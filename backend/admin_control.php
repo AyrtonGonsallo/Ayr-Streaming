@@ -31,7 +31,7 @@ if (isset($_POST['upload'])) {
 
 
   if (move_uploaded_file($_FILES['image']['tmp_name'],$targetimg) && move_uploaded_file($_FILES['video']['tmp_name'],$targetvid)) {
-    header("Location: http://local.ayr-streaming.com/homepage.php");
+    header("Location: https://ayr-streaming.herokuapp.com/homepage.php");
   }else {
     echo "error uploading";
   }
