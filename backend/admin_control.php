@@ -37,6 +37,9 @@ if (isset($_POST['upload'])) {
     echo "error uploading";
   }
 }
+else{
+  echo 'error';
+}
 
 
 ?>
