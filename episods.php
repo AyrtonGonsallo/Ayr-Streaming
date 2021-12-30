@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
   $req->execute();
   $res = $req->fetch(PDO::FETCH_ASSOC);
   
-  $req3 = $bdd->prepare("SELECT * FROM seasons WHERE sid = :sid");
+  $req3 = $bdd->prepare("SELECT * FROM seasons WHERE sid = :sid and name like %Season ".$season."% ");
   $req3->bindValue('sid',$sid , PDO::PARAM_INT);
   $req3->execute();
   $res3 = $req3->fetch(PDO::FETCH_ASSOC);
